@@ -19,7 +19,7 @@ public class Lesson {
     private String title;
 
 
-    @Column(columnDefinition = "date")
+    @Column(columnDefinition = "date", nullable = false)
     @JsonFormat(pattern = "yyyy-MM-dd")
     private Date deliveredOn;
 
