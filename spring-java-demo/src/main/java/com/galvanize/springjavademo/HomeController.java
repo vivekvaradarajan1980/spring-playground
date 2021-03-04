@@ -14,7 +14,12 @@ public class HomeController {
         return "Hellow World";
     }
 
+    @GetMapping("/math/pi")
+    public String Mathreturn(){
 
+        return "3.142857142857143";
+
+    }
 
 
 }

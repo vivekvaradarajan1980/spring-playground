@@ -27,4 +27,15 @@ public class HomeControllerTest {
                 andExpect(status().isOk()).andExpect(content().string("Hellow World"));
     }
 
+
+    @Test
+    public void testMathpireturn() throws Exception {
+
+        this.mvc.perform(get("/math/pi").accept(MediaType.TEXT_PLAIN)).
+                andExpect(status().isOk()).andExpect(content().string("3.142857142857143"));
+    }
+
 }
+
+
+
