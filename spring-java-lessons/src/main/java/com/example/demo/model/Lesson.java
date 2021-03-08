@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @Entity
 @Table(name = "lessons")
@@ -21,6 +22,7 @@ public class Lesson {
 
     @Column(columnDefinition = "date", nullable = false)
     @JsonFormat(pattern = "yyyy-MM-dd")
+    @JsonProperty("date")
     private Date deliveredOn;
 
     public Long getId() {
